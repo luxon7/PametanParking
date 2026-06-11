@@ -1,0 +1,8 @@
+# Python
+__pycache__/
+venv/
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.dbg
