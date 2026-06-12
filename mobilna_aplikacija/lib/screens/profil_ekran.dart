@@ -37,7 +37,11 @@ class _ProfilEkranState extends State<ProfilEkran> {
         korisnik = data;
         ucitavam = false;
         if (korisnik['rezervacija'] != null) {
-          startajTimer(DateTime.parse(korisnik['rezervacija']['expire_time']));
+          startajTimer(
+            DateTime.parse(
+              korisnik['rezervacija']['expire_time']
+            ).toLocal()
+          );
         }
       });
     }
