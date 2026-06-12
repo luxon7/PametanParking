@@ -129,5 +129,10 @@ def odrezervisi():
         return jsonify({"status": "success"})
     return jsonify({"status": "error", "poruka": "Nemaš pravo na ovo!"}), 403
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(
+        host='0.0.0.0',
+        port=int(os.environ.get('PORT', 8000))
+    )
